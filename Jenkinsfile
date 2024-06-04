@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t adijaiswal/loadgenerator:latest ."
+                        sh "docker build -t roopak1991/Microservice_Project:loadgenerator_${BUILD_NUMBER}.0 ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push adijaiswal/loadgenerator:latest"
+                        sh "docker push roopak1991/Microservice_Project:loadgenerator_${BUILD_NUMBER}.0"
                     }
                 }
             }
