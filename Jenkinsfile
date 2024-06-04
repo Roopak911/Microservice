@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t docker build -t roopak1991/microservice_project:emailservice_${BUILD_NUMBER}.0 ."
+                        sh "docker build -t roopak1991/microservice_project:emailservice_${BUILD_NUMBER}.0 ."
                     }
                 }
             }
