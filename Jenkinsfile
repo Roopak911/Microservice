@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t roopak1991/Microservice_Project:paymentservice_${BUILD_NUMBER}.0 ."
+                        sh "docker build -t roopak1991/microservice_project:paymentservice_${BUILD_NUMBER}.0 ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push roopak1991/Microservice_Project:paymentservice_${BUILD_NUMBER}.0 "
+                        sh "docker push roopak1991/microservice_project:paymentservice_${BUILD_NUMBER}.0 "
                     }
                 }
             }
