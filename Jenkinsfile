@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push roopak1991/Microservice_Project:adservice_${BUILD_NUMBER}.0 "
+                        sh "docker push roopak1991/microservice_project:adservice_${BUILD_NUMBER}.0 "
                     }
                 }
             }
